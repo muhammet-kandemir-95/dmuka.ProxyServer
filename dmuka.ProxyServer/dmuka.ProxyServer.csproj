@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Libraries\dmuka.Semaphore\dmuka.Semaphore.csproj" />
+  </ItemGroup>
+
 </Project>
