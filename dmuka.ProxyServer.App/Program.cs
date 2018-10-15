@@ -19,7 +19,7 @@ namespace dmuka.ProxyServer.App
                     Console.Write("Type proxy port = ");
                     int proxyPort = Convert.ToInt32(Console.ReadLine());
 
-                    Server server = new Server(hostName, port, proxyPort, coreCount: 4);
+                    Server server = new Server(hostName, port, proxyPort, coreCount: 100);
                     server.Start();
                 }
                 catch (Exception)

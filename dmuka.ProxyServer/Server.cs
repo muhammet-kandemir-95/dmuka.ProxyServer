@@ -9,7 +9,7 @@ namespace dmuka.ProxyServer
     public class Server : IDisposable
     {
         #region Constructors
-        public Server(string hostname, int port, int proxyServerPort, int coreCount = 4)
+        public Server(string hostname, int port, int proxyServerPort, int coreCount = 100)
         {
             this.ProxyServerPort = proxyServerPort;
             this.Listener = new TcpListener(IPAddress.Any, ProxyServerPort);
@@ -43,6 +43,9 @@ namespace dmuka.ProxyServer
         internal TcpListener Listener { get; private set; }
 
         internal List<Client> Clients = new List<Client>();
+        /// <summary>
+        /// Active clients count
+        /// </summary>
         public int ClientCount
         {
             get
@@ -52,7 +55,27 @@ namespace dmuka.ProxyServer
         }
 
         private bool _disposed = false;
+        /// <summary>
+        /// Was class dispose?
+        /// </summary>
+        public bool Disposed
+        {
+            get
+            {
+                return this._disposed;
+            }
+        }
         private bool _started = false;
+        /// <summary>
+        /// Was class start?
+        /// </summary>
+        public bool Started
+        {
+            get
+            {
+                return this._started;
+            }
+        }
         #endregion
 
         #region Methods
