@@ -34,13 +34,13 @@ public int ClientCount { get; }
 ```
 
 ### Disposed
- Is the current instace dispose?
+ Is the current instance dispose?
 ```csharp
 public bool Disposed { get; }
 ```
 
 ### Started
- Was the current instace start?
+ Was the current instance start?
 ```csharp
 public bool Started { get; }
 ```
