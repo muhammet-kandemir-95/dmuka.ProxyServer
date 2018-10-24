@@ -2,45 +2,45 @@
 
 Demo : [Download Project](https://github.com/muhammet-kandemir-95/dmuka.ProxyServer/archive/master.zip)
 
- Bilgisayarınızda proxy server kurmanızı sağlar. Bu sayede belli bir port üzerindeki veriyi başka bir porta aktarabilirsiniz.
+ You can create proxy server on your pc using this library. So the server can proxy on any port.
 
-## Bağımlı Olduğu Kütüphaneler
+## Used Library
 * [dmuka.Semaphore](https://github.com/muhammet-kandemir-95/dmuka.Semaphore)
 
 ## Public Variables
 
 ### ProxyServerPort
- Sunucu hangi port üzerinden veri aktarıyor.
+ New port on the server.
 ```csharp
 public int ProxyServerPort { get; }
 ```
 
 ### Hostname
- Sunucu hangi sunucuyu dinliyor.
+ Which host do the server listening? 
 ```csharp
 public string Hostname { get; }
 ```
 
 ### Port
- Sunucu hangi port üzerinden dinliyor.
+ Which port do the server listening? 
 ```csharp
 public int Port { get; }
 ```
 
 ### ClientCount
- Aynı anda yürütülen "Client" sayısını belirler.
+ Thread count(With semaphore).
 ```csharp
 public int ClientCount { get; }
 ```
 
 ### Disposed
- Aktif instance daha önceden "Dispose" oldumu.
+ Is the current instace dispose?
 ```csharp
 public bool Disposed { get; }
 ```
 
 ### Started
- Aktif instance daha önceden başlatıldımı.
+ Was the current instace start?
 ```csharp
 public bool Started { get; }
 ```
@@ -48,18 +48,18 @@ public bool Started { get; }
 ## Public Methods
 
 ### Start
- Aktif instance işlemini başlatır.
+ This is for start to current instance.
 ```csharp
 void Start()
 ```
 
 ### Dispose
- Aktif instance işlemini "Dispose" eder.
+ This is for dispose to current instance.
 ```csharp
 public void Dispose()
 ```
 
-## Örnek Kullanım
+## Example Usage
 
 ```csharp
 using System;
